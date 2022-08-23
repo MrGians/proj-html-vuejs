@@ -34,24 +34,24 @@
       <section id="jumbotron">
         <div class="row">
           <div class="col">
-            <!-- Deloper Toolset -->
-            <BaseSection
-              label="Development"
-              title="A Complete Developer Toolset"
-              titleSize="h1"
-              description="Launch your campaign and benefit from our expertise on designing and managing conversion
+            <!-- Deloper Toolset | Left -->
+            <div class="dev-toolset">
+              <BaseSection
+                label="Development"
+                title="A Complete Developer Toolset"
+                titleSize="h1"
+                description="Launch your campaign and benefit from our expertise on designing and managing conversion
       centered bootstrap4 html page."
-            >
-              <!-- CTA Buttons -->
-              <BaseButton classes="cs-btn-primary" content="Get Started" />
-              <BaseButton classes="cs-btn-outline ms-2" content="Documentation" />
-              <span class="version pt-3">Current Version: v2.6.0</span>
-            </BaseSection>
-
-            <!-- ----- -->
+              >
+                <!-- CTA Buttons -->
+                <BaseButton classes="cs-btn cs-btn-primary" content="Get Started" />
+                <BaseButton classes="cs-btn cs-btn-outline ms-2" content="Documentation" />
+                <span class="version pt-3">Current Version: v2.6.0</span>
+              </BaseSection>
+            </div>
           </div>
           <div class="col">
-            <!-- Image -->
+            <!-- Image Section | Right -->
             <figure>
               <img src="./../../assets/img/about.png" alt="About" />
             </figure>
@@ -63,11 +63,8 @@
 </template>
 
 <script>
-import BaseButton from "../ui/BaseButton.vue";
-import BaseSection from "../ui/BaseSection.vue";
 export default {
   name: "BaseHeader",
-  components: { BaseButton, BaseSection },
 };
 </script>
 
@@ -135,9 +132,11 @@ header {
   .row {
     align-items: center;
 
-    .version {
-      display: block;
-      font-size: 0.8rem;
+    .dev-toolset {
+      .version {
+        display: block;
+        font-size: 0.8rem;
+      }
     }
 
     figure > img {

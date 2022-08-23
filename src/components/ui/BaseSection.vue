@@ -1,5 +1,5 @@
 <template>
-  <div class="dev-toolset">
+  <div>
     <!-- Label -->
     <span v-if="label" class="label my-2">{{ label }}</span>
     <!-- Title -->
@@ -8,6 +8,7 @@
     <p class="description py-3">
       {{ description }}
     </p>
+    <!-- Custom content -->
     <slot></slot>
   </div>
 </template>

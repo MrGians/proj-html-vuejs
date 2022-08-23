@@ -8,7 +8,7 @@ export default {
   props: {
     classes: {
       type: String,
-      default: "cs-btn-primary",
+      default: "cs-btn cs-btn-primary",
     },
     content: {
       type: String,
@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 @import "./../../assets/styles/style.scss";
 
-button {
+.cs-btn {
   display: inline-block;
   font-weight: 500;
   padding: 0.3rem 0.8rem;
