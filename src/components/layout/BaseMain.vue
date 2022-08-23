@@ -11,41 +11,36 @@
           <!-- Features Cards -->
           <div class="row">
             <div class="col">
-              <div class="feature-card">
-                <!-- Feature Icon -->
-                <div class="icon-box">
-                  <FaIcon icon="fa-solid fa-user-large" />
-                </div>
-                <!-- Title -->
-                <h4 class="title pt-4">Title</h4>
-                <!-- Description -->
-                <p class="description">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, ratione deleniti.
-                  Sunt aspernatur, exceptmagni
-                </p>
-                <!-- Feature Redirect Link -->
-                <a class="redirect" href="#">Read More</a>
-              </div>
+              <FeatureCard
+                icon="fa-solid fa-layer-group"
+                title="Modular"
+                description="Composed in a pseudo-Latin language which more or less corresponds."
+                redirect="Read More"
+              />
             </div>
             <div class="col">
-              <div class="feature-card">
-                <!-- Feature Icon -->
-                <div class="icon-box">
-                  <FaIcon icon="fa-solid fa-user-large" />
-                </div>
-                <!-- Title -->
-                <h4 class="title pt-4">Title</h4>
-                <!-- Description -->
-                <p class="description">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, ratione deleniti.
-                  Sunt aspernatur, exceptmagni dsgfsdfsd sdfsdf sdf sd sdf sdf dsf sdfsfdsdfa
-                  fegthtr gdgdgd stur, exceptmagni dsgfsdfsd sdfsdf sdf sd sdf sdf dsf sdfsfdsdfa
-                  fegthtr gdgdgd stur, exceptmagni dsgfsdfsd sdfsdf sdf sd sdf sdf dsf sdfsfdsdfa
-                  fegthtr gdgdgd sgfsdg fe e gthrt sfsg erg sfsgrg
-                </p>
-                <!-- Feature Redirect Link -->
-                <a class="redirect" href="#">Read More</a>
-              </div>
+              <FeatureCard
+                icon="fa-solid fa-tablet"
+                title="Responsive"
+                description="Composed in a pseudo-Latin language which more or less corresponds."
+                redirect="Read More"
+              />
+            </div>
+            <div class="col">
+              <FeatureCard
+                icon="fa-regular fa-pen-to-square"
+                title="Customizable"
+                description="Composed in a pseudo-Latin language which more or less corresponds."
+                redirect="Read More"
+              />
+            </div>
+            <div class="col">
+              <FeatureCard
+                icon="fa-solid fa-maximize"
+                title="Scalable"
+                description="Composed in a pseudo-Latin language which more or less corresponds."
+                redirect="Read More"
+              />
             </div>
           </div>
         </BaseSection>
@@ -63,8 +58,10 @@
 </template>
 
 <script>
+import FeatureCard from "../ui/FeatureCard.vue";
 export default {
   name: "BaseMain",
+  components: { FeatureCard },
 };
 </script>
 
@@ -76,29 +73,5 @@ section {
 }
 
 #key-features {
-  .feature-card {
-    height: 100%;
-    font-weight: 500;
-    padding: 1rem;
-    border: 1px solid $secondary-bg-color;
-    border-radius: 5px;
-
-    .icon-box {
-      width: 70px;
-      height: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      font-size: 1.5rem;
-      color: $tertiary-text-color;
-      background-color: $secondary-bg-color;
-      border-radius: 10px;
-    }
-
-    .description {
-      color: $secondary-text-color;
-    }
-  }
 }
 </style>
