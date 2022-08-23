@@ -5,7 +5,7 @@
     <!-- Title -->
     <h2 :class="['title', titleSize]">{{ title }}</h2>
     <!-- Description -->
-    <p class="description py-3">
+    <p :class="['description', 'py-3', descriptionSize]">
       {{ description }}
     </p>
     <!-- Custom content -->
@@ -33,6 +33,10 @@ export default {
       type: String,
       required: true,
     },
+    descriptionSize: {
+      type: String,
+      required: false,
+    },
   },
 };
 </script>
@@ -55,5 +59,9 @@ export default {
   width: 70%;
   font-weight: 700;
   color: $primary-text-color;
+}
+
+.description {
+  color: $secondary-text-color;
 }
 </style>
