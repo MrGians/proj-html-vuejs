@@ -30,6 +30,35 @@
           </li>
         </ul>
       </nav>
+      <!-- Jumbotron -->
+      <section id="jumbotron">
+        <div class="row">
+          <div class="col">
+            <!-- Deloper Toolset -->
+            <div class="dev-toolset">
+              <!-- Label -->
+              <span class="label my-2">Development</span>
+              <!-- Title -->
+              <h2 class="title h1">A Complete Developer Toolset</h2>
+              <!-- Description -->
+              <p class="description py-3">
+                Launch your campaign and benefit from our expertise on designing and managing
+                conversion centered bootstrap4 html page.
+              </p>
+              <!-- CTA Buttons -->
+              <button class="cs-btn-primary">Get Started</button>
+              <button class="cs-btn-outline ms-2">Documentation</button>
+              <span class="version pt-3">Current Version: v2.6.0</span>
+            </div>
+          </div>
+          <div class="col">
+            <!-- Image -->
+            <figure>
+              <img src="./../assets/img/about.png" alt="About" />
+            </figure>
+          </div>
+        </div>
+      </section>
     </div>
   </header>
 </template>
@@ -48,7 +77,7 @@ header {
 }
 
 #navbar {
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,7 +106,8 @@ header {
     margin: 0;
 
     a {
-      height: 100%;
+      height: 35px;
+      width: 35px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -88,9 +118,66 @@ header {
       &.cs-nav-icon {
         color: $tertiary-text-color;
         background-color: $secondary-bg-color;
+        border: 1px solid $btn-border;
         border-radius: 5px;
         box-shadow: 0px 2px 4px -1px currentColor;
       }
+    }
+  }
+}
+
+#jumbotron {
+  color: $secondary-text-color;
+  padding: 7rem 0;
+
+  .row {
+    align-items: center;
+
+    .dev-toolset {
+      .label {
+        display: inline-block;
+        color: $tertiary-text-color;
+        background-color: $secondary-bg-color;
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.1rem 0.4rem;
+        border: 1px solid $btn-border;
+        border-radius: 1rem;
+      }
+
+      .title {
+        width: 70%;
+        font-weight: 700;
+        color: $primary-text-color;
+      }
+
+      button {
+        display: inline-block;
+        font-weight: 500;
+        padding: 0.3rem 0.8rem;
+        border-radius: 0.3rem;
+
+        &.cs-btn-primary {
+          color: $white;
+          background-color: $tertiary-bg-color;
+          border: 1px solid $tertiary-bg-color;
+        }
+        &.cs-btn-outline {
+          color: $tertiary-text-color;
+          background-color: $primary-bg-color;
+          border: 1px solid $tertiary-text-color;
+        }
+      }
+
+      .version {
+        display: block;
+        font-size: 0.8rem;
+      }
+    }
+
+    figure > img {
+      width: 90%;
+      margin: auto;
     }
   }
 }
