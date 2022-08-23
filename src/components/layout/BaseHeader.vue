@@ -5,7 +5,7 @@
       <nav id="navbar">
         <!-- Logo -->
         <a href="#">
-          <img class="logo" src="./../assets/img/logo-dark.png" alt="Landrick Logo" />
+          <img class="logo" src="./../../assets/img/logo-dark.png" alt="Landrick Logo" />
         </a>
         <!-- Navigation -->
         <ul class="navigation">
@@ -46,15 +46,15 @@
                 conversion centered bootstrap4 html page.
               </p>
               <!-- CTA Buttons -->
-              <button class="cs-btn-primary">Get Started</button>
-              <button class="cs-btn-outline ms-2">Documentation</button>
+              <BaseButton classes="cs-btn-primary" content="Get Started" />
+              <BaseButton classes="cs-btn-outline ms-2" content="Documentation" />
               <span class="version pt-3">Current Version: v2.6.0</span>
             </div>
           </div>
           <div class="col">
             <!-- Image -->
             <figure>
-              <img src="./../assets/img/about.png" alt="About" />
+              <img src="./../../assets/img/about.png" alt="About" />
             </figure>
           </div>
         </div>
@@ -64,13 +64,15 @@
 </template>
 
 <script>
+import BaseButton from "../ui/BaseButton.vue";
 export default {
   name: "BaseHeader",
+  components: { BaseButton },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "./../assets/styles/style.scss";
+@import "./../../assets/styles/style.scss";
 
 header {
   background-color: $primary-bg-color;
@@ -149,24 +151,6 @@ header {
         width: 70%;
         font-weight: 700;
         color: $primary-text-color;
-      }
-
-      button {
-        display: inline-block;
-        font-weight: 500;
-        padding: 0.3rem 0.8rem;
-        border-radius: 0.3rem;
-
-        &.cs-btn-primary {
-          color: $white;
-          background-color: $tertiary-bg-color;
-          border: 1px solid $tertiary-bg-color;
-        }
-        &.cs-btn-outline {
-          color: $tertiary-text-color;
-          background-color: $primary-bg-color;
-          border: 1px solid $tertiary-text-color;
-        }
       }
 
       .version {

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import BaseHeader from "./components/BaseHeader.vue";
+import BaseHeader from "./components/layout/BaseHeader.vue";
 export default {
   name: "App",
   components: { BaseHeader },
