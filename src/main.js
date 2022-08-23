@@ -51,7 +51,9 @@ library.add(
 Vue.component("FaIcon", FontAwesomeIcon);
 
 import BaseButton from "./components/ui/BaseButton";
+import BaseSection from "./components/ui/BaseSection";
 Vue.component("BaseButton", BaseButton);
+Vue.component("BaseSection", BaseSection);
 
 Vue.config.productionTip = false;
 

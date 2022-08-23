@@ -35,21 +35,20 @@
         <div class="row">
           <div class="col">
             <!-- Deloper Toolset -->
-            <div class="dev-toolset">
-              <!-- Label -->
-              <span class="label my-2">Development</span>
-              <!-- Title -->
-              <h2 class="title h1">A Complete Developer Toolset</h2>
-              <!-- Description -->
-              <p class="description py-3">
-                Launch your campaign and benefit from our expertise on designing and managing
-                conversion centered bootstrap4 html page.
-              </p>
+            <BaseSection
+              label="Development"
+              title="A Complete Developer Toolset"
+              titleSize="h1"
+              description="Launch your campaign and benefit from our expertise on designing and managing conversion
+      centered bootstrap4 html page."
+            >
               <!-- CTA Buttons -->
               <BaseButton classes="cs-btn-primary" content="Get Started" />
               <BaseButton classes="cs-btn-outline ms-2" content="Documentation" />
               <span class="version pt-3">Current Version: v2.6.0</span>
-            </div>
+            </BaseSection>
+
+            <!-- ----- -->
           </div>
           <div class="col">
             <!-- Image -->
@@ -65,9 +64,10 @@
 
 <script>
 import BaseButton from "../ui/BaseButton.vue";
+import BaseSection from "../ui/BaseSection.vue";
 export default {
   name: "BaseHeader",
-  components: { BaseButton },
+  components: { BaseButton, BaseSection },
 };
 </script>
 
@@ -135,28 +135,9 @@ header {
   .row {
     align-items: center;
 
-    .dev-toolset {
-      .label {
-        display: inline-block;
-        color: $tertiary-text-color;
-        background-color: $secondary-bg-color;
-        font-size: 0.8rem;
-        font-weight: 500;
-        padding: 0.1rem 0.4rem;
-        border: 1px solid $btn-border;
-        border-radius: 1rem;
-      }
-
-      .title {
-        width: 70%;
-        font-weight: 700;
-        color: $primary-text-color;
-      }
-
-      .version {
-        display: block;
-        font-size: 0.8rem;
-      }
+    .version {
+      display: block;
+      font-size: 0.8rem;
     }
 
     figure > img {
