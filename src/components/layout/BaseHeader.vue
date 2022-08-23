@@ -59,6 +59,16 @@
         </div>
       </section>
     </div>
+    <hr />
+    <!-- Premium Partner -->
+    <section id="premium-partner" class="mx-3 py-5">
+      <img src="./../../assets/img/amazon.svg" alt="Amazon" />
+      <img src="./../../assets/img/google.svg" alt="Google" />
+      <img src="./../../assets/img/lenovo.svg" alt="Lenovo" />
+      <img src="./../../assets/img/paypal.svg" alt="Paypal" />
+      <img src="./../../assets/img/shopify.svg" alt="Shopify" />
+      <img src="./../../assets/img/spotify.svg" alt="Spotify" />
+    </section>
   </header>
 </template>
 
@@ -73,6 +83,8 @@ export default {
 
 header {
   background-color: $primary-bg-color;
+  border-bottom-left-radius: 100%50px;
+  border-bottom-right-radius: 100%100px;
 }
 
 #navbar {
@@ -143,6 +155,16 @@ header {
       width: 90%;
       margin: auto;
     }
+  }
+}
+
+#premium-partner {
+  display: flex;
+  justify-content: center;
+
+  img {
+    max-height: 30px;
+    padding: 0 2rem;
   }
 }
 </style>
