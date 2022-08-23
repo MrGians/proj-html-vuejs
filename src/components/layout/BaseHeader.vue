@@ -30,6 +30,10 @@
           </li>
         </ul>
       </nav>
+      <!-- Settings -->
+      <section id="settings">
+        <FaIcon icon="fa-solid fa-gear" />
+      </section>
       <!-- Jumbotron -->
       <section id="jumbotron">
         <div class="row">
@@ -135,6 +139,22 @@ header {
       }
     }
   }
+}
+
+#settings {
+  position: absolute;
+  top: 20%;
+  left: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  color: $tertiary-text-color;
+  background-color: $white;
+  padding: 0.7rem;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 
 #jumbotron {
