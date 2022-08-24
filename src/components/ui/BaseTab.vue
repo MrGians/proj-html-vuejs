@@ -12,7 +12,8 @@
     </ul>
     <div class="tab-content">
       <div v-for="(tab, i) in tabs" :key="tab.id" v-show="currentActiveIndex === i">
-        <span class="green">$</span> {{ tab.content }} <span class="green">-g</span> claps.js
+        <span class="highlighted">$</span> {{ tab.content }}
+        <span class="highlighted">-g</span> claps.js
       </div>
     </div>
   </div>
@@ -59,6 +60,7 @@ export default {
       border: 1px solid transparent;
       border-radius: 5px;
       cursor: pointer;
+      transition: all 0.4s;
 
       &.active {
         background-color: $dark-grey;
@@ -69,7 +71,7 @@ export default {
   .tab-content {
     text-align: start;
     color: $secondary-text-color;
-    & .green {
+    & .highlighted {
       color: $quickstart-text-color;
     }
   }
