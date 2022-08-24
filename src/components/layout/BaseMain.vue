@@ -76,6 +76,7 @@ export default {
   props: {
     quickstartTabs: Array,
     keyFeatures: Array,
+    buildTools: Array,
   },
 };
 </script>

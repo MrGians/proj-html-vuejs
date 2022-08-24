@@ -1,13 +1,23 @@
 <template>
   <div>
     <BaseHeader v-bind="headerLinks" :partners="premiumPartner" />
-    <BaseMain :quickstartTabs="quickstartTabs" :keyFeatures="keyFeatures" />
+    <BaseMain
+      :quickstartTabs="quickstartTabs"
+      :keyFeatures="keyFeatures"
+      :buildTools="devBuildTools"
+    />
   </div>
 </template>
 
 <script>
 // Data
-import { quickstartTabs, keyFeatures, headerLinks, premiumPartner } from "./assets/data/index.js";
+import {
+  quickstartTabs,
+  keyFeatures,
+  headerLinks,
+  premiumPartner,
+  devBuildTools,
+} from "./assets/data/index.js";
 // Components
 import BaseHeader from "./components/layout/BaseHeader.vue";
 import BaseMain from "./components/layout/BaseMain.vue";
@@ -20,6 +30,7 @@ export default {
       keyFeatures,
       headerLinks,
       premiumPartner,
+      devBuildTools,
     };
   },
 };
