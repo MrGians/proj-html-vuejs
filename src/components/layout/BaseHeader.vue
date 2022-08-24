@@ -144,6 +144,11 @@ header {
       border: 1px solid $btn-border;
       border-radius: 5px;
       box-shadow: 0px 2px 4px -1px currentColor;
+
+      &:hover {
+        color: $white;
+        background-color: $tertiary-bg-color;
+      }
     }
   }
 }
