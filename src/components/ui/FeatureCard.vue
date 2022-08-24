@@ -11,7 +11,7 @@
       {{ description }}
     </p>
     <!-- Redirect Link -->
-    <a v-if="redirect" class="redirect" href="#">{{ redirect }}</a>
+    <a v-if="redirect" class="redirect" href="#">{{ redirect }} <span>&rsaquo;</span></a>
   </div>
 </template>
 
@@ -66,6 +66,9 @@ export default {
 
   .description {
     color: $secondary-text-color;
+  }
+  .redirect span {
+    font-size: 1.3rem;
   }
 }
 </style>
