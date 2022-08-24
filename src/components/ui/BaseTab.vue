@@ -70,7 +70,7 @@ export default {
     text-align: start;
     color: $secondary-text-color;
     & .green {
-      color: green;
+      color: $quickstart-text-color;
     }
   }
 }
