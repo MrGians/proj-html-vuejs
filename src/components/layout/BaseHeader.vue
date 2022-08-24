@@ -53,7 +53,7 @@
           <div class="col">
             <!-- Image Section | Right -->
             <figure>
-              <img src="./../../assets/img/about.png" alt="About" />
+              <img class="w-100" src="./../../assets/img/about.png" alt="About" />
             </figure>
           </div>
         </div>
@@ -170,11 +170,6 @@ header {
         display: block;
         font-size: 0.8rem;
       }
-    }
-
-    figure > img {
-      width: 90%;
-      margin: auto;
     }
   }
 }
