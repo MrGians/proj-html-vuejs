@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes">{{ content }}</button>
+  <button :class="classes">{{ content + " " }}</button>
 </template>
 
 <script>
@@ -36,6 +36,10 @@ export default {
     color: $tertiary-text-color;
     background-color: $primary-bg-color;
     border: 1px solid $tertiary-text-color;
+  }
+
+  &:hover::after {
+    content: "\01F852";
   }
 }
 </style>

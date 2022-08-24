@@ -126,7 +126,7 @@ section {
       right: 4px;
       height: 50px;
       border-radius: 2rem;
-      margin-top: 5px;
+      margin-top: 4px;
     }
   }
 }
