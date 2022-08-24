@@ -19,7 +19,7 @@
       <!-- Quickstart Section -->
       <section id="quickstart">
         <BaseSection
-          centered="true"
+          :centered="true"
           label="Quickstart"
           title="Awesome isn't it? Let's dive in!"
           description="Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect."
@@ -57,7 +57,7 @@
       <!-- Business Plan Section -->
       <section id="business-plan">
         <BaseSection
-          centered="true"
+          :centered="true"
           title="Our rates for developer from landrick team"
           description="Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect."
           descriptionSize="w-50"
@@ -71,7 +71,20 @@
         </BaseSection>
       </section>
       <!-- Find out Section -->
-      <section id="find-out"></section>
+      <section id="find-out">
+        <BaseSection
+          :centered="true"
+          title="Want to be among the first to find out?"
+          description="Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect."
+          descriptionSize="w-50"
+        >
+          <!-- Get Started Form -->
+          <div class="get-started w-50 mx-auto">
+            <BaseInput @set-address="getAddress" />
+            <BaseButton class="nested" classes="cs-btn cs-btn-primary" content="Get Started" />
+          </div>
+        </BaseSection>
+      </section>
     </div>
   </main>
 </template>
@@ -85,6 +98,11 @@ export default {
     buildTools: Array,
     businessPlans: Array,
   },
+  methods: {
+    getAddress(address) {
+      this.$emit("get-address", address);
+    },
+  },
 };
 </script>
 
@@ -92,6 +110,24 @@ export default {
 @import "./../../assets/styles/style.scss";
 
 section {
-  margin: 5rem auto;
+  margin: 6.5rem auto;
+}
+
+#find-out {
+  .get-started {
+    position: relative;
+
+    &:first-child {
+      height: 60px;
+    }
+    .nested {
+      position: absolute;
+      top: 0;
+      right: 4px;
+      height: 50px;
+      border-radius: 2rem;
+      margin-top: 5px;
+    }
+  }
 }
 </style>

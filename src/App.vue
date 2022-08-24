@@ -6,6 +6,7 @@
       :keyFeatures="keyFeatures"
       :buildTools="devBuildTools"
       :businessPlans="businessPlans"
+      @get-address="logAddress"
     />
   </div>
 </template>
@@ -35,6 +36,11 @@ export default {
       devBuildTools,
       businessPlans,
     };
+  },
+  methods: {
+    logAddress(address) {
+      console.log(address);
+    },
   },
 };
 </script>
