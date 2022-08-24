@@ -1,6 +1,6 @@
 <template>
   <div class="feature-card">
-    <!-- Feature Icon -->
+    <!-- Icon -->
     <div class="icon-box">
       <FaIcon :icon="icon" />
     </div>
@@ -10,7 +10,7 @@
     <p class="description">
       {{ description }}
     </p>
-    <!-- Feature Redirect Link -->
+    <!-- Redirect Link -->
     <a v-if="redirect" class="redirect" href="#">{{ redirect }}</a>
   </div>
 </template>
@@ -19,21 +19,23 @@
 export default {
   name: "FeatureCard",
   props: {
-    icon: {
-      type: String,
+    item: {
+      type: Object,
       required: true,
     },
-    title: {
-      type: String,
-      required: true,
+  },
+  computed: {
+    icon() {
+      return this.item.icon;
     },
-    description: {
-      type: String,
-      required: true,
+    title() {
+      return this.item.title;
     },
-    redirect: {
-      type: String,
-      required: false,
+    description() {
+      return this.item.description;
+    },
+    redirect() {
+      return this.item.redirect;
     },
   },
 };

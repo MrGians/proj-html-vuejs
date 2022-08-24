@@ -10,37 +10,8 @@
         >
           <!-- Features Cards -->
           <div class="row">
-            <div class="col">
-              <FeatureCard
-                icon="fa-solid fa-layer-group"
-                title="Modular"
-                description="Composed in a pseudo-Latin language which more or less corresponds."
-                redirect="Read More"
-              />
-            </div>
-            <div class="col">
-              <FeatureCard
-                icon="fa-solid fa-tablet"
-                title="Responsive"
-                description="Composed in a pseudo-Latin language which more or less corresponds."
-                redirect="Read More"
-              />
-            </div>
-            <div class="col">
-              <FeatureCard
-                icon="fa-regular fa-pen-to-square"
-                title="Customizable"
-                description="Composed in a pseudo-Latin language which more or less corresponds."
-                redirect="Read More"
-              />
-            </div>
-            <div class="col">
-              <FeatureCard
-                icon="fa-solid fa-maximize"
-                title="Scalable"
-                description="Composed in a pseudo-Latin language which more or less corresponds."
-                redirect="Read More"
-              />
+            <div v-for="feature in keyFeatures" :key="feature.id" class="col">
+              <FeatureCard :item="feature" />
             </div>
           </div>
         </BaseSection>
@@ -77,6 +48,7 @@ export default {
   components: { FeatureCard, BaseSection, BaseTab },
   props: {
     quickstartTabs: Array,
+    keyFeatures: Array,
   },
 };
 </script>
