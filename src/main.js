@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 
+// # Font Awesome
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 
@@ -50,10 +51,15 @@ library.add(
 );
 Vue.component("FaIcon", FontAwesomeIcon);
 
+// # Vue Global Components
 import BaseButton from "./components/ui/BaseButton";
 import BaseSection from "./components/ui/BaseSection";
+import FeatureCard from "./components/ui/FeatureCard";
+import BaseTab from "./components/ui/BaseTab";
 Vue.component("BaseButton", BaseButton);
 Vue.component("BaseSection", BaseSection);
+Vue.component("FeatureCard", FeatureCard);
+Vue.component("BaseTab", BaseTab);
 
 Vue.config.productionTip = false;
 
