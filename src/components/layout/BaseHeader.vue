@@ -15,7 +15,7 @@
               @click="currentNavLink = i"
               :href="link.url"
             >
-              {{ link.text }}
+              {{ link.text }} <span v-if="link.id !== 1">&#9013;</span>
             </a>
           </li>
         </ul>
@@ -104,6 +104,7 @@ header {
 
   .navigation {
     display: flex;
+    align-items: baseline;
     font-weight: 500;
     margin: 0;
 
@@ -114,6 +115,11 @@ header {
 
       &.active {
         color: $tertiary-text-color;
+      }
+
+      & > span {
+        font-weight: 600;
+        vertical-align: text-bottom;
       }
     }
   }
@@ -156,6 +162,7 @@ header {
   padding: 0.7rem;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
+  cursor: pointer;
 }
 
 #jumbotron {
