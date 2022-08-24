@@ -1,6 +1,6 @@
 <template>
   <ul id="list">
-    <li v-for="item in list" :key="item.id">{{ item.text }}</li>
+    <li :class="marker" v-for="item in list" :key="item.id">{{ item.text }}</li>
   </ul>
 </template>
 
@@ -11,6 +11,11 @@ export default {
     list: {
       type: Array,
       required: true,
+    },
+    marker: {
+      type: String,
+      default: "checkmark",
+      required: false,
     },
   },
 };
@@ -28,7 +33,7 @@ export default {
     align-items: baseline;
     padding: 0.3rem 0;
   }
-  & li::before {
+  & li.checkmark::before {
     content: "\2713";
     display: flex;
     justify-content: center;
@@ -40,6 +45,12 @@ export default {
     color: $tertiary-bg-color;
     border: 1px solid $tertiary-bg-color;
     border-radius: 50%;
+    margin-right: 1rem;
+  }
+  & li.arrow::before {
+    content: "\203A";
+    font-size: 1.3rem;
+    font-weight: 500;
     margin-right: 1rem;
   }
 }
