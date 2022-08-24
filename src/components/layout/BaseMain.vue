@@ -46,7 +46,16 @@
         </BaseSection>
       </section>
       <!-- Quickstart Section -->
-      <section id="quickstart"></section>
+      <section id="quickstart">
+        <BaseSection
+          centered="true"
+          label="Quickstart"
+          title="Awesome isn't it? Let's dive in!"
+          description="Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect."
+          descriptionSize="w-50"
+        >
+        </BaseSection>
+      </section>
       <!-- Build tools Section -->
       <section id="build-tools"></section>
       <!-- Business Plan Section -->
@@ -59,9 +68,10 @@
 
 <script>
 import FeatureCard from "../ui/FeatureCard.vue";
+import BaseSection from "../ui/BaseSection.vue";
 export default {
   name: "BaseMain",
-  components: { FeatureCard },
+  components: { FeatureCard, BaseSection },
 };
 </script>
 

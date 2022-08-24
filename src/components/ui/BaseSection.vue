@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div :class="{ 'text-center': centered }">
     <!-- Label -->
     <span v-if="label" class="label my-2">{{ label }}</span>
     <!-- Title -->
     <h2 :class="['title', titleSize]">{{ title }}</h2>
     <!-- Description -->
-    <p :class="['description', 'py-3', descriptionSize]">
+    <p :class="['description', 'py-3', descriptionSize, { 'mx-auto': centered }]">
       {{ description }}
     </p>
     <!-- Custom content -->
@@ -17,6 +17,11 @@
 export default {
   name: "BaseSection",
   props: {
+    centered: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
     label: {
       type: String,
       required: false,
@@ -56,9 +61,12 @@ export default {
 }
 
 .title {
-  width: 70%;
   font-weight: 700;
   color: $primary-text-color;
+
+  &.w-70 {
+    width: 70%;
+  }
 }
 
 .description {

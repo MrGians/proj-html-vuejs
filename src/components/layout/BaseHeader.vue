@@ -43,7 +43,7 @@
               <BaseSection
                 label="Development"
                 title="A Complete Developer Toolset"
-                titleSize="h1"
+                titleSize="h1 w-70"
                 description="Launch your campaign and benefit from our expertise on designing and managing conversion
       centered bootstrap4 html page."
               >
