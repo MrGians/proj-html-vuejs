@@ -60,7 +60,7 @@ export default [
     paymentInfo: "*No credit card required",
   },
   {
-    id: 1,
+    id: 3,
     type: "Basic",
     cost: "$79.00",
     billing: "Per Month",

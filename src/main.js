@@ -54,11 +54,13 @@ import BaseSection from "./components/ui/BaseSection";
 import FeatureCard from "./components/ui/FeatureCard";
 import BaseTab from "./components/ui/BaseTab";
 import BaseList from "./components/ui/BaseList";
+import BusinessCard from "./components/ui/BusinessCard";
 Vue.component("BaseButton", BaseButton);
 Vue.component("BaseSection", BaseSection);
 Vue.component("FeatureCard", FeatureCard);
 Vue.component("BaseTab", BaseTab);
 Vue.component("BaseList", BaseList);
+Vue.component("BusinessCard", BusinessCard);
 
 Vue.config.productionTip = false;
 
