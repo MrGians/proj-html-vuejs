@@ -40,11 +40,7 @@
                 description="You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website."
               >
                 <!-- Dev-Tools List -->
-                <ul class="tool-list">
-                  <li>Digital Marketing Solutions for Tomorrow</li>
-                  <li>Our Talented & Experienced Marketing Agency</li>
-                  <li>Create your own skin to match your brand</li>
-                </ul>
+                <BaseList :list="buildTools" />
                 <!-- Read More Button -->
                 <BaseButton classes="cs-btn cs-btn-primary" content="Read More" />
               </BaseSection>
@@ -70,9 +66,10 @@
 import FeatureCard from "../ui/FeatureCard.vue";
 import BaseSection from "../ui/BaseSection.vue";
 import BaseTab from "../ui/BaseTab.vue";
+import BaseList from "../ui/BaseList.vue";
 export default {
   name: "BaseMain",
-  components: { FeatureCard, BaseSection, BaseTab },
+  components: { FeatureCard, BaseSection, BaseTab, BaseList },
   props: {
     quickstartTabs: Array,
     keyFeatures: Array,
@@ -93,32 +90,6 @@ section {
 
   .row {
     align-items: center;
-
-    .dev-tool {
-      .tool-list {
-        padding: 0;
-
-        & li {
-          display: flex;
-          align-items: baseline;
-          padding: 0.3rem 0;
-        }
-        & li::before {
-          content: "\2713";
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-width: 1rem;
-          height: 1rem;
-          font-size: 0.7rem;
-          font-weight: bold;
-          color: $tertiary-bg-color;
-          border: 1px solid $tertiary-bg-color;
-          border-radius: 50%;
-          margin-right: 1rem;
-        }
-      }
-    }
   }
 }
 </style>

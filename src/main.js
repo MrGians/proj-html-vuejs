@@ -15,8 +15,6 @@ import { faTablet } from "@fortawesome/free-solid-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 import { faMaximize } from "@fortawesome/free-solid-svg-icons";
 
-import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
-
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -39,7 +37,6 @@ library.add(
   faTablet,
   faPenToSquare,
   faMaximize,
-  faCircleCheck,
   faAngleDown,
   faAngleRight,
   faArrowRight,
@@ -56,10 +53,12 @@ import BaseButton from "./components/ui/BaseButton";
 import BaseSection from "./components/ui/BaseSection";
 import FeatureCard from "./components/ui/FeatureCard";
 import BaseTab from "./components/ui/BaseTab";
+import BaseList from "./components/ui/BaseList";
 Vue.component("BaseButton", BaseButton);
 Vue.component("BaseSection", BaseSection);
 Vue.component("FeatureCard", FeatureCard);
 Vue.component("BaseTab", BaseTab);
+Vue.component("BaseList", BaseList);
 
 Vue.config.productionTip = false;
 
