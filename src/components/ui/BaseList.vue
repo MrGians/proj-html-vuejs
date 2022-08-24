@@ -20,6 +20,7 @@ export default {
 @import "./../../assets/styles/style.scss";
 
 #list {
+  color: $secondary-text-color;
   padding: 0;
 
   & li {

@@ -31,7 +31,7 @@
       </section>
       <!-- Build tools Section -->
       <section id="build-tools">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col">
             <!-- Dev-Tools| Left -->
             <div class="dev-tool">
@@ -83,13 +83,5 @@ export default {
 
 section {
   margin: 5rem auto;
-}
-
-#build-tools {
-  color: $secondary-text-color;
-
-  .row {
-    align-items: center;
-  }
 }
 </style>
