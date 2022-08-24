@@ -55,7 +55,16 @@
         </div>
       </section>
       <!-- Business Plan Section -->
-      <section id="business-plan"></section>
+      <section id="business-plan">
+        <BaseSection
+          centered="true"
+          title="Our rates for developer from landrick team"
+          description="Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect."
+          descriptionSize="w-50"
+        >
+          <!-- Business Cards -->
+        </BaseSection>
+      </section>
       <!-- Find out Section -->
       <section id="find-out"></section>
     </div>
