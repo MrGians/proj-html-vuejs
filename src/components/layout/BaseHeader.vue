@@ -44,8 +44,8 @@
       centered bootstrap4 html page."
               >
                 <!-- CTA Buttons -->
-                <BaseButton classes="cs-btn cs-btn-primary" content="Get Started" />
-                <BaseButton classes="cs-btn cs-btn-outline ms-2" content="Documentation" />
+                <BaseButton classes="cs-btn cs-btn-primary me-2 my-2" content="Get Started" />
+                <BaseButton classes="cs-btn cs-btn-outline me-2 my-2" content="Documentation" />
                 <span class="version pt-3">Current Version: v2.6.0</span>
               </BaseSection>
             </div>
