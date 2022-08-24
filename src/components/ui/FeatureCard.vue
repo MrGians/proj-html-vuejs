@@ -50,6 +50,7 @@ export default {
   padding: 1rem;
   border: 1px solid $secondary-bg-color;
   border-radius: 5px;
+  transition: transform 0.3s;
 
   .icon-box {
     width: 70px;
@@ -69,6 +70,10 @@ export default {
   }
   .redirect span {
     font-size: 1.3rem;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
   }
 }
 </style>
