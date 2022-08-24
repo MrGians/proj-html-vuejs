@@ -9,24 +9,20 @@
         </a>
         <!-- Navigation -->
         <ul class="navigation">
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">Landing</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">Docs</a></li>
+          <li v-for="(link, i) in navLinks" :key="link.id">
+            <a
+              :class="{ active: currentNavLink === i }"
+              @click="currentNavLink = i"
+              :href="link.url"
+            >
+              {{ link.text }}
+            </a>
+          </li>
         </ul>
         <!-- Navigation CTA Icon -->
         <ul class="navigation-icons">
-          <li>
-            <a href="#"><FaIcon icon="fa-solid fa-magnifying-glass" /></a>
-          </li>
-          <li>
-            <a class="cs-nav-icon" href="#"><FaIcon icon="fa-brands fa-github" /></a>
-          </li>
-          <li>
-            <a class="cs-nav-icon" href="#"><FaIcon icon="fa-brands fa-stack-overflow" /></a>
-          </li>
-          <li>
-            <a class="cs-nav-icon" href="#"><FaIcon icon="fa-solid fa-user-large" /></a>
+          <li v-for="icon in navIcons" :key="icon.id">
+            <a class="cs-nav-icon" :href="icon.url"><FaIcon :icon="icon.type" /></a>
           </li>
         </ul>
       </nav>
@@ -79,6 +75,15 @@
 <script>
 export default {
   name: "BaseHeader",
+  props: {
+    navLinks: Array,
+    navIcons: Array,
+  },
+  data() {
+    return {
+      currentNavLink: 0,
+    };
+  },
 };
 </script>
 
@@ -129,14 +134,14 @@ header {
       color: $secondary-text-color;
       padding: 0.5rem;
       margin: 0 0.3rem;
+    }
 
-      &.cs-nav-icon {
-        color: $tertiary-text-color;
-        background-color: $secondary-bg-color;
-        border: 1px solid $btn-border;
-        border-radius: 5px;
-        box-shadow: 0px 2px 4px -1px currentColor;
-      }
+    li:not(:first-child) a.cs-nav-icon {
+      color: $tertiary-text-color;
+      background-color: $secondary-bg-color;
+      border: 1px solid $btn-border;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px -1px currentColor;
     }
   }
 }
@@ -181,6 +186,7 @@ header {
 #premium-partner {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   img {
     max-height: 30px;
