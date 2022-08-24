@@ -7,7 +7,7 @@
 
 <script>
 // Data
-import { quickstartTabs, keyFeatures, headerLinks } from "./assets/data/index.js";
+import { quickstartTabs, keyFeatures, headerLinks, premiumPartner } from "./assets/data/index.js";
 // Components
 import BaseHeader from "./components/layout/BaseHeader.vue";
 import BaseMain from "./components/layout/BaseMain.vue";
@@ -19,6 +19,7 @@ export default {
       quickstartTabs,
       keyFeatures,
       headerLinks,
+      premiumPartner,
     };
   },
 };
