@@ -62,12 +62,7 @@
     <hr />
     <!-- Premium Partner -->
     <section id="premium-partner" class="mx-3 py-5">
-      <img src="./../../assets/img/amazon.svg" alt="Amazon" />
-      <img src="./../../assets/img/google.svg" alt="Google" />
-      <img src="./../../assets/img/lenovo.svg" alt="Lenovo" />
-      <img src="./../../assets/img/paypal.svg" alt="Paypal" />
-      <img src="./../../assets/img/shopify.svg" alt="Shopify" />
-      <img src="./../../assets/img/spotify.svg" alt="Spotify" />
+      <img v-for="partner in partners" :key="partner.id" :src="partner.src" :alt="partner.text" />
     </section>
   </header>
 </template>
@@ -78,6 +73,7 @@ export default {
   props: {
     navLinks: Array,
     navIcons: Array,
+    partners: Array,
   },
   data() {
     return {

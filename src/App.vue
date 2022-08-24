@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BaseHeader v-bind="headerLinks" />
+    <BaseHeader v-bind="headerLinks" :partners="premiumPartner" />
     <BaseMain :quickstartTabs="quickstartTabs" :keyFeatures="keyFeatures" />
   </div>
 </template>
