@@ -63,6 +63,11 @@
           descriptionSize="w-50"
         >
           <!-- Business Cards -->
+          <div class="row">
+            <div v-for="plan in businessPlans" :key="plan.id" class="col">
+              <BusinessCard :plan="plan" :isBest="plan.id === 2" />
+            </div>
+          </div>
         </BaseSection>
       </section>
       <!-- Find out Section -->
@@ -72,13 +77,8 @@
 </template>
 
 <script>
-import FeatureCard from "../ui/FeatureCard.vue";
-import BaseSection from "../ui/BaseSection.vue";
-import BaseTab from "../ui/BaseTab.vue";
-import BaseList from "../ui/BaseList.vue";
 export default {
   name: "BaseMain",
-  components: { FeatureCard, BaseSection, BaseTab, BaseList },
   props: {
     quickstartTabs: Array,
     keyFeatures: Array,
