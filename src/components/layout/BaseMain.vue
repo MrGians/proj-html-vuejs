@@ -54,6 +54,8 @@
           description="Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect."
           descriptionSize="w-50"
         >
+          <!-- Quickstart Tabs -->
+          <BaseTab />
         </BaseSection>
       </section>
       <!-- Build tools Section -->
@@ -69,9 +71,10 @@
 <script>
 import FeatureCard from "../ui/FeatureCard.vue";
 import BaseSection from "../ui/BaseSection.vue";
+import BaseTab from "../ui/BaseTab.vue";
 export default {
   name: "BaseMain",
-  components: { FeatureCard, BaseSection },
+  components: { FeatureCard, BaseSection, BaseTab },
 };
 </script>
 
@@ -80,8 +83,5 @@ export default {
 
 section {
   margin: 5rem auto;
-}
-
-#key-features {
 }
 </style>
