@@ -55,7 +55,7 @@
           descriptionSize="w-50"
         >
           <!-- Quickstart Tabs -->
-          <BaseTab />
+          <BaseTab :tabs="quickstartTabs" />
         </BaseSection>
       </section>
       <!-- Build tools Section -->
@@ -75,6 +75,9 @@ import BaseTab from "../ui/BaseTab.vue";
 export default {
   name: "BaseMain",
   components: { FeatureCard, BaseSection, BaseTab },
+  props: {
+    quickstartTabs: Array,
+  },
 };
 </script>
 

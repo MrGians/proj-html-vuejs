@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      currentActiveIndex: 1,
+      currentActiveIndex: 0,
     };
   },
 };
@@ -39,6 +39,8 @@ export default {
 @import "./../../assets/styles/style.scss";
 
 #tab {
+  width: 70%;
+  margin: 0 auto;
   background-color: $dark-grey;
   border-radius: 5px;
   padding: 1rem;

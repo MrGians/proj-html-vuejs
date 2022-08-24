@@ -1,7 +1,7 @@
 <template>
   <div>
     <BaseHeader />
-    <BaseMain />
+    <BaseMain :quickstartTabs="quickstartTabs" />
   </div>
 </template>
 
