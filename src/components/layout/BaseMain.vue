@@ -83,6 +83,7 @@ export default {
     quickstartTabs: Array,
     keyFeatures: Array,
     buildTools: Array,
+    businessPlans: Array,
   },
 };
 </script>

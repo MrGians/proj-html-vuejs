@@ -5,6 +5,7 @@
       :quickstartTabs="quickstartTabs"
       :keyFeatures="keyFeatures"
       :buildTools="devBuildTools"
+      :businessPlans="businessPlans"
     />
   </div>
 </template>
@@ -17,6 +18,7 @@ import {
   headerLinks,
   premiumPartner,
   devBuildTools,
+  businessPlans,
 } from "./assets/data/index.js";
 // Components
 import BaseHeader from "./components/layout/BaseHeader.vue";
@@ -31,6 +33,7 @@ export default {
       headerLinks,
       premiumPartner,
       devBuildTools,
+      businessPlans,
     };
   },
 };
