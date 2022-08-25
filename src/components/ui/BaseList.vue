@@ -1,6 +1,9 @@
 <template>
   <ul id="list">
-    <li :class="marker" v-for="item in list" :key="item.id">{{ item.text }}</li>
+    <li :class="marker" v-for="item in list" :key="item.id">
+      <a v-if="isLink" :href="item.url">{{ item.text }}</a>
+      <span v-else>{{ item.text }}</span>
+    </li>
   </ul>
 </template>
 
@@ -15,6 +18,11 @@ export default {
     marker: {
       type: String,
       default: "checkmark",
+      required: false,
+    },
+    isLink: {
+      type: Boolean,
+      default: false,
       required: false,
     },
   },
@@ -32,7 +40,16 @@ export default {
     display: flex;
     align-items: baseline;
     padding: 0.3rem 0;
+
+    & a {
+      color: $secondary-text-color;
+
+      &:hover {
+        color: $white;
+      }
+    }
   }
+
   & li.checkmark::before {
     content: "\2713";
     display: flex;
