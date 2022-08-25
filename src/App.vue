@@ -8,7 +8,12 @@
       :businessPlans="businessPlans"
       @get-address="logAddress"
     />
-    <BaseFooter @get-address="logAddress" :socialLinks="socialLinks" v-bind="footerLinks" />
+    <BaseFooter
+      @get-address="logAddress"
+      :socialLinks="socialLinks"
+      v-bind="footerLinks"
+      :paymentMethods="paymentMethods"
+    />
   </div>
 </template>
 
@@ -23,6 +28,7 @@ import {
   businessPlans,
   socialLinks,
   footerLinks,
+  paymentMethods,
 } from "./assets/data/index.js";
 // Components
 import BaseHeader from "./components/layout/BaseHeader.vue";
@@ -41,6 +47,7 @@ export default {
       businessPlans,
       socialLinks,
       footerLinks,
+      paymentMethods,
     };
   },
   methods: {

@@ -6,6 +6,7 @@ import devBuildTools from "./_dev-build-tools.js";
 import businessPlans from "./_business-plans.js";
 import socialLinks from "./_social-links.js";
 import footerLinks from "./_footer-links.js";
+import paymentMethods from "./_payment-methods.js";
 
 export {
   quickstartTabs,
@@ -16,4 +17,5 @@ export {
   businessPlans,
   socialLinks,
   footerLinks,
+  paymentMethods,
 };

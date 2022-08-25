@@ -91,6 +91,7 @@ export default {
     socialLinks: Array,
     companyLinks: Array,
     usefullLinks: Array,
+    paymentMethods: Array,
   },
   components: { BaseList, BaseInput },
   methods: {
