@@ -22,6 +22,7 @@ import {
   devBuildTools,
   businessPlans,
   socialLinks,
+  footerLinks,
 } from "./assets/data/index.js";
 // Components
 import BaseHeader from "./components/layout/BaseHeader.vue";
@@ -39,6 +40,7 @@ export default {
       devBuildTools,
       businessPlans,
       socialLinks,
+      footerLinks,
     };
   },
   methods: {
