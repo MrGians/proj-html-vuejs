@@ -40,14 +40,12 @@
               <p class="py-4">Sign up and receive the latest tips via email.</p>
               <!-- Newsletter Input Field -->
               <!-- TODO Fix input group layout -->
-              <div class="newsletter-field">
+              <div class="newsletter-field pb-3">
                 <label class="form-label"
                   >Write your email <span class="text-danger"> * </span></label
                 >
                 <div class="d-flex align-items-center">
-                  <span class="w-50 custom-bg">
-                    <FaIcon icon="fa-regular fa-envelope" /> Your Email:
-                  </span>
+                  <span class="w-50"> <FaIcon icon="fa-regular fa-envelope" /> Your Email: </span>
                   <BaseInput
                     class="w-50"
                     @set-address="getAddress"
@@ -65,14 +63,16 @@
     </div>
     <hr />
     <!-- Bottom Footer -->
-    <div id="bottom-footer">
+    <div id="bottom-footer" class="py-3">
       <div class="container">
         <div class="row">
           <div class="col">
             <div class="copywrite">&copy; 2020 Landrick. Design by Shreethemes.</div>
           </div>
           <div class="col">
-            <div class="payment-methods">payment methods</div>
+            <div class="payment-methods">
+              <img v-for="card in paymentMethods" :key="card.id" :src="card.src" :alt="card.text" />
+            </div>
           </div>
         </div>
         <!-- Back to Top Button -->
@@ -142,11 +142,18 @@ footer {
         }
       }
     }
+  }
+}
 
-    .right-col {
-      .custom-bg {
-        background-color: $footer-bg-input;
-      }
+#bottom-footer {
+  .payment-methods {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+
+    img {
+      max-height: 30px;
+      padding: 0 0.3rem 0.3rem;
     }
   }
 }
