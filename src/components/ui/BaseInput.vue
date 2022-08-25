@@ -38,9 +38,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "./../../assets/styles/style.scss";
+
 input {
   padding: 1rem 1.5rem;
   border: 1px solid grey;
   border-radius: 2rem;
+}
+
+.cs-footer {
+  color: $white;
+  background-color: $footer-bg-input;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 0.3rem;
 }
 </style>
