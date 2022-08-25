@@ -39,7 +39,6 @@
               <h4 class="title">Newsletter</h4>
               <p class="py-4">Sign up and receive the latest tips via email.</p>
               <!-- Newsletter Input Field -->
-              <!-- TODO Fix input group layout -->
               <div class="newsletter-field pb-3">
                 <label class="form-label"
                   >Write your email <span class="text-danger"> * </span></label
@@ -83,8 +82,6 @@
 </template>
 
 <script>
-import BaseList from "../ui/BaseList.vue";
-import BaseInput from "../ui/BaseInput.vue";
 export default {
   name: "BaseFooter",
   props: {
@@ -93,7 +90,6 @@ export default {
     usefullLinks: Array,
     paymentMethods: Array,
   },
-  components: { BaseList, BaseInput },
   methods: {
     getAddress(address) {
       this.$emit("get-address", address);

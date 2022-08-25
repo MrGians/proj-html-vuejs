@@ -15,10 +15,6 @@ import { faTablet } from "@fortawesome/free-solid-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 import { faMaximize } from "@fortawesome/free-solid-svg-icons";
 
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -37,9 +33,6 @@ library.add(
   faTablet,
   faPenToSquare,
   faMaximize,
-  faAngleDown,
-  faAngleRight,
-  faArrowRight,
   faFacebookF,
   faInstagram,
   faTwitter,
