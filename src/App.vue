@@ -21,6 +21,7 @@ import {
   premiumPartner,
   devBuildTools,
   businessPlans,
+  socialLinks,
 } from "./assets/data/index.js";
 // Components
 import BaseHeader from "./components/layout/BaseHeader.vue";
@@ -37,6 +38,7 @@ export default {
       premiumPartner,
       devBuildTools,
       businessPlans,
+      socialLinks,
     };
   },
   methods: {
