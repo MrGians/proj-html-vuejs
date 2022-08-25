@@ -8,7 +8,7 @@
       :businessPlans="businessPlans"
       @get-address="logAddress"
     />
-    <BaseFooter />
+    <BaseFooter @get-address="logAddress" :socialLinks="socialLinks" v-bind="footerLinks" />
   </div>
 </template>
 
