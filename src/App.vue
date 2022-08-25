@@ -8,6 +8,7 @@
       :businessPlans="businessPlans"
       @get-address="logAddress"
     />
+    <BaseFooter />
   </div>
 </template>
 
@@ -24,9 +25,10 @@ import {
 // Components
 import BaseHeader from "./components/layout/BaseHeader.vue";
 import BaseMain from "./components/layout/BaseMain.vue";
+import BaseFooter from "./components/layout/BaseFooter.vue";
 export default {
   name: "App",
-  components: { BaseHeader, BaseMain },
+  components: { BaseHeader, BaseMain, BaseFooter },
   data() {
     return {
       quickstartTabs,
