@@ -37,6 +37,12 @@ export default {
     background-color: $primary-bg-color;
     border: 1px solid $tertiary-text-color;
   }
+  &.cs-btn-footer {
+    color: $tertiary-text-color;
+    background-color: $footer-bg-btn;
+    border: none;
+    box-shadow: 0px 2px 2px 0px $tertiary-text-color;
+  }
 
   &:hover::after {
     content: "\01F852";
